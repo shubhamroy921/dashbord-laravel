@@ -1,0 +1,109 @@
+.check-box {
+    transform: scale(1.5);
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #7da6ff;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 50%;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.status .check-box {
+    transform: none;
+}
+
+.nav-item .active .icon.icon-shape.icon-sm i {
+    color: #fff !important;
+}
+
+.nav-item .icon.icon-shape.icon-sm i {
+    color: #111111 !important;
+}
+
+/**  Image Preview **/
+
+.smedia .image-preview,
+#callback-preview {
+    color: #fff;
+    background-color: #800 !important;
+    background-size: 45px auto;
+    background-position: center 35px;
+    background-repeat: no-repeat;
+}
+
+.image-preview,
+#callback-preview {
+    width: 250px;
+    height: 250px;
+    border: 2px dashed #ddd;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+
+.image-preview label,
+#callback-preview label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.image-preview input,
+#callback-preview input {
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+
+.cke_notifications_area {
+    display: none;
+}
